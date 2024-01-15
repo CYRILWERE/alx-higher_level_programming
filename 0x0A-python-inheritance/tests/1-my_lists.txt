@@ -1,0 +1,38 @@
+#!/usr/bin/python3
+"""
+Test cases for MyList class
+"""
+
+MyList = __import__('1-my_list').MyList
+
+# Test case 1: Basic test
+my_list = MyList()
+my_list.append(1)
+my_list.append(4)
+my_list.append(2)
+my_list.append(3)
+my_list.append(5)
+assert str(my_list) == "[1, 4, 2, 3, 5]"
+my_list.print_sorted()
+assert str(my_list) == "[1, 4, 2, 3, 5]"
+
+# Test case 2: Empty list
+empty_list = MyList()
+assert str(empty_list) == "[]"
+empty_list.print_sorted()
+assert str(empty_list) == "[]"
+
+# Test case 3: List with one element
+single_element_list = MyList([42])
+assert str(single_element_list) == "[42]"
+single_element_list.print_sorted()
+assert str(single_element_list) == "[42]"
+
+# Test case 4: List with repeated elements
+repeated_elements_list = MyList([3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5])
+assert str(repeated_elements_list) == "[3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]"
+repeated_elements_list.print_sorted()
+assert str(repeated_elements_list) == "[1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]"
+
+print("All test cases passed!")
+
