@@ -1,0 +1,13 @@
+import unittest
+from models.rectangle import Rectangle
+
+class TestRectangleMethods(unittest.TestCase):
+
+    def test_area(self):
+        r = Rectangle(3, 4)
+        expected_area = 3 * 4
+        self.assertEqual(r.area(), expected_area)
+
+if __name__ == '__main__':
+    unittest.main()
+
