@@ -1,0 +1,13 @@
+import unittest
+from models.square import Square
+
+class TestSquareMethods(unittest.TestCase):
+
+    def test_area(self):
+        s = Square(5)
+        expected_area = 5 * 5
+        self.assertEqual(s.area(), expected_area)
+
+if __name__ == '__main__':
+    unittest.main()
+
