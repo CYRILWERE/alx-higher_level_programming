@@ -1,0 +1,4 @@
+-- List all tables of a database
+USE dbname;
+SHOW TABLES;
+
