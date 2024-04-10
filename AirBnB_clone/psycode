@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+"""Module containing the example class"""
+
+class ExampleClass:
+    """Example class to demonstrate PEP 8 compliance"""
+
+    def __init__(self, name):
+        self.name = name
+
+    def greet(self):
+        """Greet the user"""
+        print(f"Hello, {self.name}!")
+
+def main():
+    """Main function"""
+    example_instance = ExampleClass("World")
+    example_instance.greet()
+
+if __name__ == "__main__":
+    main()
+
