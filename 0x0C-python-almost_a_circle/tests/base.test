@@ -1,0 +1,14 @@
+mport unittest
+from models.base import Base
+
+class TestBaseMethods(unittest.TestCase):
+
+    def test_create_instance(self):
+        # Assuming create method is available in the Base class
+        instance = Base.create(id=1, name="example")
+        self.assertEqual(instance.id, 1)
+        self.assertEqual(instance.name, "example")
+
+if __name__ == '__main__':
+    unittest.main()
+
